@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "ng": "ng",
     "start": "nx serve test-lib-components",
     "build": "nx build lib-gestao-conteudo-ui",
-    "test": "nx test lib-gestao-conteudo-ui",
-    "test:ci": "nx test lib-gestao-conteudo-ui",
-    "g:c": "nx generate @nrwl/angular:component --project=lib-gestao-conteudo-ui --style=scss"
+    "test": "nx run-many --target=test --all",
+    "lint": "nx run-many --target=lint --all",
+    "format": "nx format:write",
+    "test:ci": "nx run-many --target=test --all"
   },
   "private": true,
   "dependencies": {
@@ -37,6 +37,7 @@
     "@angular/cli": "~15.2.0",
     "@angular/compiler-cli": "~15.2.0",
     "@angular/language-service": "~15.2.0",
+    "@nrwl/linter": "^19.8.4",
     "@nx/cypress": "16.0.0",
     "@nx/eslint-plugin": "16.0.0",
     "@nx/jest": "16.0.0",

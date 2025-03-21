@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import { LibGestaoConteudoUiModule } from './../../../../libs/lib-gestao-conteudo-ui/src/lib/lib-gestao-conteudo-ui.module';
+import { LibGestaoConteudoUiModule } from '@lib-gestao-conteudo-ui/lib-gestao-conteudo-ui';
 import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
 import { NxWelcomeComponent } from './nx-welcome.component';
@@ -11,7 +11,7 @@ import { NxWelcomeComponent } from './nx-welcome.component';
   imports: [
     BrowserModule,
     LibGestaoConteudoUiModule,
-    RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [],
   bootstrap: [AppComponent],
